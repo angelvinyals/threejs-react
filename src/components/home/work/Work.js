@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 import { withRouter } from 'react-router'
 
 import LabelsContainer from "./LabelsContainer"
@@ -62,8 +62,5 @@ class Work extends Component {
     }
 }
 
-const mapStateToProps = store => ({
-    projects: store.projects
-})
 
-export default withRouter(connect(mapStateToProps)(Work));
+export default withRouter(Work);

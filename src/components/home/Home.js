@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 import { withRouter } from 'react-router'
 
 import scrollToElement from 'scroll-to-element';
 
-import { fetchProjects } from "../../redux/actions/projects";
+//import { fetchProjects } from "../../redux/actions/projects";
 
 import Navbar from "./Navbar";
 import Header from "./header/Header";
@@ -19,11 +19,11 @@ class Home extends Component {
 
         this.state = { currentScroll: 0, currentSection: "" };
     }
-
+/*
     componentWillMount = () => {
         this.props.fetchProjects()
     }
-
+*/
     componentDidMount = () => {        
         window.addEventListener("scroll", this.handleScroll);
     }
@@ -96,26 +96,11 @@ class Home extends Component {
 
                 <Header />
 
-                { homeSections
-                    .filter( section => section.component )
-                    .map( section =>
-                        <div key={section.name} ref={section.name}>
-                            { section.name === "work" ? <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> : <section.component /> }
-                        </div> 
-                    )
-                }
+                
 
             </div>
         );
     }
 }
 
-const mapStateToProps = store => ({
-    projects: store.projects
-})
-
-const mapDispatchToProps = dispatch => ({
-    fetchProjects: (args) => dispatch(fetchProjects(args))
-})
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
+export default withRouter(Home);
