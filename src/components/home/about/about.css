@@ -12,9 +12,6 @@
     max-width: 100px;
     min-height: 100px;
     min-width: 100px;
-
-    border-radius: 360px;
-    border: 2px solid rgba(76, 175, 80, 0.6);
 }
 
 .about-text {
@@ -55,15 +52,6 @@
         min-width: 300px;
     
         margin-right: 60px;
-    
-        border-radius: 360px;
-        border: 4px solid rgba(76, 175, 80, 0.6);
-
-        -webkit-animation: about-image-border-change 10000ms infinite;
-        -moz-animation: about-image-border-change 10000ms infinite;
-        -o-animation: about-image-border-change 10000ms infinite;
-        -ms-animation: about-image-border-change 10000ms infinite;
-        animation: about-image-border-change 10000ms infinite;
     }
 }
 

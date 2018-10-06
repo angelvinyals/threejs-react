@@ -19,11 +19,7 @@ class Home extends Component {
 
         this.state = { currentScroll: 0, currentSection: "" };
     }
-/*
-    componentWillMount = () => {
-        this.props.fetchProjects()
-    }
-*/
+
     componentDidMount = () => {        
         window.addEventListener("scroll", this.handleScroll);
     }
@@ -95,7 +91,15 @@ class Home extends Component {
                 </div>
 
                 <Header />
-
+                
+                { homeSections
+                    .filter( section => section.component )
+                    .map( section =>
+                        <div key={section.name} ref={section.name}>
+                            { section.name === "work" ? <section.component onShowProjectDetails={() => this.scrollToSection("work")} /> : <section.component /> }
+                        </div> 
+                    )
+                }
                 
 
             </div>
