@@ -11,7 +11,14 @@ class E1_1 extends Component {
   render() {
     return (
       <div className="home-section container-e">  
-        <div className="container-e"><h1>Exercise 1</h1></div>
+        <div className="container-e">
+            <h1>Chapter 1</h1>
+            <h4>Rendering and viewing a 3D object</h4>
+            <h4>Adding materials, lights, and shadows <span>(shadows doesn't work fine)</span></h4>
+            <h4>Expanding your first scene with animations</h4>
+            
+
+        </div>
         <div className="e-canvas">
           <ThreeScene/>
         </div>

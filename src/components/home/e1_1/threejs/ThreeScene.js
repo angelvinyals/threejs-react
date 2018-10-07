@@ -41,7 +41,7 @@ class ThreeScene extends Component{
     this.renderer = new THREE.WebGLRenderer({ antialias: true })
     this.renderer.setClearColor('#000')
     this.renderer.setSize(width, height)
-    this.renderer.shadowMap.Enabled = true;
+    this.renderer.shadowMap.enabled = true
 
     // add the output of the renderer to the html element
     this.canvasRef.appendChild(this.renderer.domElement)
@@ -58,7 +58,6 @@ class ThreeScene extends Component{
     this.plane = new THREE.Mesh(planeGeometry, planeMaterial)
     this.plane.rotation.x = -0.5 * Math.PI;
     this.plane.position.set(15, 0, 0);
-    this.plane.castShadow = true
     this.plane.receiveShadow = true
     this.scene.add(this.plane)
 

@@ -27,7 +27,7 @@ const SECTIONS = [
         component: Clock
     },
      {
-        name: "exercise_1",
+        name: "Chapter 1",
         component: E1_1
     }
 ]   

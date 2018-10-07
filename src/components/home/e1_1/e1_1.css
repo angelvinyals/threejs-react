@@ -3,12 +3,21 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 2em
 }
 
+h4{
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+}
+
+span{
+    color: red
+}
 /* desktop-x-small */
 @media all and (min-width: 0) and (max-width: 480px) { 
     .e-canvas {
-        height: 65vh;
+        height: 60vh;
         width: 100%;
     }
 }
@@ -16,7 +25,7 @@
 /* desktop-small */
 @media all and (min-width: 481px) and (max-width: 840px) {
     .e-canvas {
-        height: 65vh;
+        height: 60vh;
         width: 100%;
     }
 }
@@ -24,7 +33,7 @@
 /* desktop-medium */
 @media all and (min-width: 841px) and (max-width: 1280px) {
     .e-canvas {
-        height: 75vh;
+        height: 70vh;
         width: 100%;
     }
 }
@@ -32,7 +41,7 @@
 /* desktop-large */
 @media all and (min-width: 1281px) and (max-width: 1600px) { 
     .e-canvas {
-        height: 70vh;
+        height: 65vh;
         width: 100%;
     }
 }
@@ -40,7 +49,7 @@
 /* desktop-xlarge */
 @media all and (min-width: 1601px) {
     .e-canvas {
-        height: 75vh;
+        height: 70vh;
         width: 100%;
     }   
 }
