@@ -9,11 +9,11 @@ import scrollToElement from 'scroll-to-element';
 import Navbar from "./Navbar";
 import Header from "./header/Header";
 
-import homeSections from "./homeSections"
+import projectDetailsSections from "./projectDetailsSections"
 
 import "./home.css"
 
-class Home extends Component {
+class ProjectDetails extends Component {
     constructor(props) {
         super(props);
 
@@ -87,12 +87,12 @@ class Home extends Component {
         return (
             <div className="root-home" >
                 <div ref={ element => this.navbar = element }>
-                    <Navbar items={homeSections} onItemClick={this.scrollToSection} currentSection={currentSection} currentScroll={currentScroll} />
+                    <Navbar items={projectDetailsSections} onItemClick={this.scrollToSection} currentSection={currentSection} currentScroll={currentScroll} />
                 </div>
 
                 <Header />
                 
-                { homeSections
+                { projectDetailsSections
                     .filter( section => section.component )
                     .map( section =>
                         <div key={section.name} ref={section.name}>
@@ -107,4 +107,4 @@ class Home extends Component {
     }
 }
 
-export default withRouter(Home);
+export default withRouter(ProjectDetails);
